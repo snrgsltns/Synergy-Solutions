@@ -1,0 +1,464 @@
+/* Native Element Styling */
+
+* {box-sizing: border-box; scroll-behavior: smooth;}
+
+body {
+    background: #0f76bb;
+    display: block;
+    font-family: 'Roboto', sans-serif
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.activepage {
+    font-weight: bold;
+}
+
+/* Navbar Styling [GLOBAL ELEMENT] */
+
+#logo {
+    float: left;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    margin-left: 25px;
+    clear: left;
+}
+
+.navbar {
+    background: #ffffff;
+    background-size: cover;
+    width: 100%;
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.navtext ul {
+    list-style-type: none;
+    padding: 0;
+    margin-right: 50px;
+    overflow: auto;
+}
+
+.navtext li {
+    font-size: 20px;
+    float: right;
+    clear: left;
+    margin-top: 10px;
+    padding: 15px;
+    display: inline;
+}
+
+.navtext li a {
+    background-size: cover;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.navtext li a:hover {
+    font-weight: bold;
+    transition: color .6s ease;
+    transition: font-weight .2s ease;
+    color: #0f76bb;
+}
+
+/* Footer Styling [GLOBAL ELEMENT] */
+
+footer {
+    background-color: #ffffff;
+    width: 100%;
+    display: block;
+    position: relative;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 50px;
+}
+
+footer h6 {
+    cursor: not-allowed;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    margin: auto;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+/* Slideshow Styling [HOMEPAGE ONLY] */
+
+.slide-container {
+    z-index: 99;
+    width: 98%;
+    background-color: white;
+    border-radius: .5em;
+    max-width: 100%;
+    max-height: 500px;
+    position: relative;
+    margin: auto;
+    margin-top: 125px;
+    overflow: auto;
+}
+
+.slide-container img {
+    height: auto;
+    width: auto;
+    max-width: 500px;
+    max-height: 750px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.prevbutton, .nextbutton {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    user-select: none;
+    border-radius: 0 3px 3px 0;
+    padding: 16px;
+    transition: 0.6s ease;
+}
+
+.nextbutton {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prevbutton:hover, .nextbutton:hover {
+    background-color: rgba(0,0,0,.3);
+}
+
+.slidecaption {
+    color: black;
+    font-size: 15px;
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.slidetext {
+    color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+}
+
+.slidedot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(161, 161, 161);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.slideactive, .dot:hover {
+    background-color: #242424;
+}
+
+.fade {
+    -webkit-animation: fade 1.5s;
+    animation: fade 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} to {opacity: 1};
+}
+
+@keyframes fade {
+    from {opacity: .4} to {opacity: 1};
+}
+
+/* Featured Car Styling [HOMEPAGE ONLY] */
+
+.featuredcar {
+    border-radius: .5em;
+    background-color: white;
+    width: 98%;
+    position: relative;
+    margin: auto;
+    height: 350px;
+}
+
+.car1 {
+    max-width: 100%;
+    float: left;
+    width: 13%;
+    line-height: 200px;
+    height: 200px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: #3a3a3a;
+    background-size: 100%;
+    border-radius: .5em;
+    overflow: auto;
+}
+
+
+.car1text {
+    border-radius: .5em;
+    display: flex;
+    background-color: #3a3a3a;
+    margin: 50px 50px 50px 50px;
+}
+
+.explorertitle {
+    color: lightskyblue;
+    margin-top: 25px;
+}
+
+.explorertext {
+    color: white;
+    margin-top: 100px;
+    margin-left: -256px;
+    font-size: 15px;
+}
+
+/* About Us Styling [ABOUT US ONLY] */
+
+.aboutus {
+    position: relative;
+    margin-top: 125px;
+    border: 3px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    background-color: #1d1c1c;
+    width: 100%;
+    overflow: auto;
+}
+
+.aboutustext {
+    color: white;
+    text-align: center;
+    font-weight: normal;
+}
+
+.aboutustext a {
+    text-decoration: none;
+    color: #0f76bb;
+    font-weight: bold;
+}
+
+/* Employee Profiles Styling [ABOUT US ONLY] */
+
+.ouremployees {
+    position: relative;
+    display: block;
+    background-color: #1d1c1c;
+    width: 100%;
+    border: 3px solid #ffffff;
+    overflow: auto;
+}
+
+.ouremployees p {
+    color: white;
+}
+
+.ouremployees img {
+    width: 509px;
+    height: 100%;
+    float: left;
+    padding: 50px;
+    border-radius: 100%;
+    overflow: auto;
+}
+
+.ouremployees h3 {
+    color: white;
+    font-weight: bold;
+}
+
+.ouremployees a {
+    color: #0f76bb;
+}
+
+/* Car Table Styling [CARS PAGE ONLY] */
+
+.carspagedesc p {
+    color: white;
+}
+
+.carstable th {
+    color: #0f76bb;
+}
+
+.carstable td {
+    color: white;
+}
+
+table, td {
+    background-color: #1d1c1c;
+    border-collapse: collapse;
+    border: 2px solid white;
+    overflow: auto;
+}
+
+td > #contact {
+    color: #0f76bb;
+}
+
+.carstable td a {
+    font-weight: bold;
+}
+
+.carstable td {
+    padding: 25px;
+}
+
+/* Reviews Section Styling [CUSTOMERS PAGE ONLY] */
+
+.reviews {
+    position: relative;
+    margin: auto;
+    margin-top: 150px;
+    width: 75%;
+    background-color: #1d1c1c;
+    border-radius: .5em;
+    padding: 15px 32px;
+    overflow: auto;
+}
+
+.reviews h3 {
+    color: #0f76bb;
+    text-align: center;
+}
+
+.reviews h4 {
+    text-align: center;
+    color: white;
+}
+
+.reviewtext {
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.reviewtext a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0f76bb
+}
+
+/* Contact Form Styling [CUSTOMERS PAGE ONLY] */
+
+.contactform {
+    background-color: #1d1c1c;
+    margin: auto;
+    width: 75%;
+    padding: 15px 32px;
+    border-radius: .5em;
+    overflow: auto;
+}
+
+.contactform h3 {
+    text-align: center;
+    color: #0f76bb;
+}
+
+.contactform h4 {
+    text-align: center;
+    color: white;
+}
+
+.contactform label {
+    clear: both;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.contactform input {
+    color: white;
+    background-color: #3a3a3a;
+    box-shadow: none;
+    padding-bottom: 50px;
+    padding-right: 100px;
+    margin-bottom: 50px;
+}
+
+#submitbutton {
+    color: #0f76bb;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 15px 32px;
+    border-radius: .5em;
+    border: 2px solid #0f76bb;
+}
+
+.contactform h3 a {
+    text-decoration: none;
+    color: white;
+}
+
+.aftersubmit {
+    display: none;
+}
+
+/* Dealers Title Styling [CONTACT PAGE ONLY] */
+
+.dealertitle {
+    width: 75%;
+    margin: auto;
+    margin-top: 150px;
+    background-color: #1d1c1c;
+    border-radius: .5em;
+    border: 2px solid rgb(145, 1, 1);
+    overflow: auto;
+}
+
+.dealertitle h3 {
+    padding: 15px 32px;
+    margin: auto;
+    text-align: center;
+    color: red;
+}
+
+.dealertitle h4 {
+    text-align: center;
+    color: white;
+}
+
+/* Dealers List Styling [CONTACT PAGE ONLY] */
+
+.dealerlist {
+    width: 80%;
+    margin: auto;
+    background-color: #1d1c1c;
+    border-radius: .5em;
+    padding: 50px;
+}
+
+.dealerinfo li {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    list-style-position: inside;
+}

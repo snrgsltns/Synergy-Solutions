@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Synergy Solutions</title>
+        
+        <!-- Newer Meta Tags -->
+
+        <meta charset="UTF-8">
+        <meta name="description" content="Synergy Solutions - Software made to fit">
+        <meta name="keywords" content="synergy, solutions, snrg, sltns, software, bespoke, north east software">
+        <meta name="author" content="Synergy">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- OG Meta Tags -->
+
+        <meta property="og:type" content= "website" />
+        <meta property="og:site_name" content="Synergy Solutions" />
+        <meta property="og:title" content="Synergy Solutions" />
+        <meta property="og:description" content="Synergy Solutions - Software made to fit" />
+
+        <!-- Other meta pre-reqs for embedding -->
+        
+        <meta name="theme-color" content="#89cff0" />
+        <meta property="og:image" content="./res/logo.png" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="icon" type="image/png" href="./res/logo.png">
+        <link rel="stylesheet" href="./res/ss.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <header>
+        <!-- Navbar Container -->
+
+        <div class="navbar">
+
+            <!-- Logo and Navigation Text -->
+
+            <a href="./index.html"> <img id="logo" src="./res/logo.png" /> </a>
+
+            <!-- Needed to invert the options here for some odd reason?? Probably to do with float -->
+            <div class="navtext">
+                <ul>
+                    <li><a href="./contact.html" class="activepage">Contact</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./aboutus.html">About Us</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+    <body>
+        <div class="reviews">
+            <div class="reviewstitle">
+                <h3>Customer Reviews</h3>
+                <h4>Synergy Solutions works with loads of customers who are happy to give testimonials about their service.</h4>
+                <h4>Here's a few of their reviews to hopefully persuade you to pick us!</h4>
+            </div>
+
+            <div class="reviewtext" onmouseover="doBackground(this)" onmouseout="unBackground(this)">
+                <p>George and Joseph came together on my proposal to deliver one of the best websites I've ever seen designed so quickly - they're excellent at what they do!</p>
+                <p>- <a>Chris</a></p>
+            </div>
+
+            <div class="reviewtext" onmouseover="doBackground(this)" onmouseout="unBackground(this)">
+                <p>Ryan's ability to provide quick solutions to my problems, and draw up actual usable designs for my ideas helped me have faith in Synergy Solutions to deliver excellent quality software.</p>
+                <p>- <a>David</a></p>
+            </div>
+
+            <div class="reviewtext" onmouseover="doBackground(this)" onmouseout="unBackground(this)">
+                <p>Samuel was an absolute joy to work with when securing my website - they covered all possible points that I wanted them to in just under a week! Thank you Synergy Solutions!</p>
+                <p>- <a>Keith</a></p>
+            </div>
+
+            <div class="reviewtext" onmouseover="doBackground(this)" onmouseout="unBackground(this)">
+                <p>As always absolutely perfect. Cannot be faulted.</p>
+                <p>- <a>Marcus</a></p>
+            </div>
+
+            <div class="reviewtext" onmouseover="doBackground(this)" onmouseout="unBackground(this)">
+                <p>Well done Synergy Solutions! Can't fault the quality and quickness of the service.</p>
+                <p>- <a>Patrick</a></p>
+            </div>
+        </div>
+
+        <hr style="margin: 50px;">
+
+        <div class="contactform">
+            <h3>Feeling Persuaded?</h3>
+
+            <h4>Our Staff are available from 10 AM - 6 PM (GMT+1).</h4>
+            <h4>Get in contact and we can help you get the software solution you desire!</h4>
+
+            <hr style="margin: 25px;">
+
+            <form id="customersform" action="./">
+                <label for="customername">Name:</label><br>
+                <input type="text"><br>
+                <label for="email">Email Address:</label><br>
+                <input type="text"><br>
+                <label for="comment">Comment:</label><br>
+                <input type="text"><br>
+
+                <input id="submitbutton" type="submit" value="Submit Form">
+            </form>
+
+            <h3 class="aftersubmit">Thank you for submitting your comment! Our staff will be in contact.</h3>
+            <h3 class="aftersubmit">To submit another comment, simply <a href="contact.html">refresh this page.</a></h3>
+        </div>
+    </body>
+
+    <footer>
+        <div class="footer">
+            <h6>&copy; Copyright Synergy Solutions 2022</h6>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('customersform').addEventListener('submit', function(ev) {
+            let aftersubmit = document.getElementsByClassName('aftersubmit');
+            let submitbutton = document.getElementById('submitbutton')
+            var i;
+
+            ev.preventDefault();
+
+            for (i = 0; i < aftersubmit.length; i++) {
+                aftersubmit[i].className = "";
+                aftersubmit[i].style.display = "block";
+            }
+            submitbutton.style.display = "none";
+        })
+
+        function doBackground(x) {
+            x.style.border = "2px solid lightskyblue";
+            x.style.borderRadius = ".5em";
+        }
+        function unBackground(x) {
+            x.style.border = "0px";
+        }
+    </script>
+</html>
